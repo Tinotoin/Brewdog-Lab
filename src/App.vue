@@ -1,16 +1,18 @@
 <template lang="html">
   <div>
     <h1>Brewdog Beers</h1>
+
     <!-- <a href="https://api.punkapi.com/v2/beers?page=1&per_page=80">Page 1</a><br>
       <a href="https://api.punkapi.com/v2/beers?page=2&per_page=80">Page 2</a><br>
         <a href="https://api.punkapi.com/v2/beers?page=3&per_page=80">Page 3</a><br>
           <a href="https://api.punkapi.com/v2/beers?page=4&per_page=80">Page 4</a><br>
             <a href="https://api.punkapi.com/v2/beers?page=5&per_page=80">Page 5</a><br> -->
+
     <beer-filter-form :beers="beers" />
     <div class="main-container">
-      <beer-detail style="text-align:right;" :beer="selectedBeer"></beer-detail>
+      <beer-detail style="text-align:center;" :beer="selectedBeer"></beer-detail>
       <beers-list :beers="beers"></beers-list>
-      <!-- <beer-faves :beers-fave="beers-fave"></beer-faves> -->
+      <beer-faves :beers-fave="beers-fave"></beer-faves>
 
 
 

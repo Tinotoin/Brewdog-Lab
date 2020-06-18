@@ -19,7 +19,7 @@
         "selectedBeer": {}
       }
     },
-    props: ["beers"],
+    props: ['beers'],
     methods: {
       searchForBeer(){
         let foundBeer = this.beers.find((beer) => {

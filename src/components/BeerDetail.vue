@@ -4,6 +4,7 @@
 
       <div v-if='beer'>
         <h3>{{beer.name}}</h3>
+        <h4>{{beer.first_brewed}}</h4>
         <p><b>Strength:</b> {{beer.abv}}%</p>
         <p><b>Tasting Notes:</b> {{beer.description}}</p>
         <img class="med-image" :src="beer.image_url"/>
@@ -11,7 +12,7 @@
         <ul>
           <li v-for="(beer, index) in beers" :key="index">
             <span>{{beer.name}}</span>
-            <!-- <span v-if="faveBeers.includes(beer)? 'Favourite' : ''">Favourite</span> -->
+            <!-- <span v-if="beerFave.includes(beer)? 'Favourite' : ''">Favourite</span> -->
             <button v-on:click="addToFavourites(index)">Favourite</button>
           </li>
         </ul>
@@ -39,13 +40,7 @@ export default {
 };
 
 
-
-// mounted(){
-//   eventBus.$on('beer-selected', (beer) => {
-//     this.beer = beer
-//   })
-// }
-// </script>
+ </script>
 
 <style lang="css" scoped>
 
